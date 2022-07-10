@@ -12,11 +12,13 @@ Then(/^The following links navigate correctly$/, dataTable => {
 
     for (let i = 1; i < data.length; i++) {
         const locator = `a:contains("${data[i][0]}")`;
-        cy.log('locator',locator);
+         
+        cy.log('locatorrrrrrrrrrrrrrrrrrr',locator);
         cy.get(locator).click();
         cy.location('pathname').should('include', data[i][1]);
         cy.go('back');
     }
+
 
     
    
